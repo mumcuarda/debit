@@ -1,5 +1,6 @@
 // app/page.tsx
 import Image from "next/image";
+import rehubLogo from "../public/rehub-logo.jpeg"; // <-- added: static import from /public
 
 export default function Home() {
   return (
@@ -12,10 +13,12 @@ export default function Home() {
         </div>
         <div className="w-20 h-20 relative">
           <Image
-            src="/rehub-logo.jpg" // place your uploaded logo into /public as rehub-logo.jpg
+            src={rehubLogo}
             alt="ReHub Logo"
-            fill
+            width={80}
+            height={80}
             className="object-contain"
+            priority
           />
         </div>
       </header>
