@@ -1,7 +1,7 @@
 from __future__ import annotations
 from fastapi import FastAPI, UploadFile, File, HTTPException, Form
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import StreamingResponse
+from fastapi.responses import StreamingResponse, JSONResponse
 from pathlib import Path
 import io, os
 
@@ -9,7 +9,6 @@ from .main import parse_slip, build_contexts, render_docs, zip_outputs
 
 app = FastAPI(title="Document Automation Engine")
 
-# Allow your Next.js site to call the API
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[os.getenv("FRONTEND_ORIGIN", "http://localhost:3000")],
