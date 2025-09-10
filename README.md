@@ -21,18 +21,6 @@ This tool generates two debit note documents from a single slip note file. It is
 - Upload form and generate button  
 - Deployed on Vercel  
 
-## Project Structure
-/app → Next.js frontend
-/api → FastAPI backend
-├── server.py → FastAPI entrypoint
-├── main.py → parsing and rendering engine
-├── templates → DOCX templates for variant A and B
-└── requirements.txt
-railway.toml → Railway build and start config
-
-bash
-Copy code
-
 ## Running Locally
 Backend:
 ```bash
